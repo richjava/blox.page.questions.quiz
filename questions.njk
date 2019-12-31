@@ -1,0 +1,43 @@
+{% set blox = htmlWebpackPlugin.options.blox %}
+{% set title = blox.db.questions.items[blox.page.pagination.currentPage - 1].fields.text %}
+
+{% extends "layout/layout.njk" %}
+
+{% block content %}
+<section class="container pt-6 pt-lg-8 pb-8 pb-lg-10">
+  <div class="text-center order-xl-2 mx-auto">
+    <p class="lead">Question <span id="current-page" data-current-page="{{blox.page.pagination.currentPage}}">
+        {{blox.page.pagination.currentPage}}
+      </span> of <span id="questions-amt" data-questions-amt="{{blox.page.pagination.total}}">
+        {{blox.page.pagination.total}}
+      </span></p>
+    <h1 class="mw-800 mx-auto h3 pt-2 pb-5">{{blox.db.questions.items[blox.page.pagination.currentPage - 1].fields.text}}
+    </h1>
+    {% include "pages/packages/blox.package.quiz/blox.page.questions.quiz/partials/blox.partial.response-buttons.quiz/response-buttons.njk" %}
+    {# {% if blox.page.pagination.currentPage === (blox.page.pagination.total) | round %}{% endif %} #}
+
+    <div class="response-btns mx-auto mt-5">
+      <div class="d-flex align-items-center justify-content-between flex-wrap">
+        <div class="order-1 pt-5 pt-xl-0">
+          {% if blox.page.pagination.currentPage !== 1 %}
+          <a class="btn btn-info response-btn-back px-4"
+            href="/questions/page-{{blox.page.pagination.currentPage - 1}}">Back</a>
+          {% endif %}
+        </div>
+
+        <div class="order-2 pt-5 pt-xl-0">
+          {% if blox.page.pagination.currentPage != (blox.page.pagination.total) | round %}
+          <a class="btn btn-info response-btn-next px-4"
+            href="/questions/page-{{blox.page.pagination.currentPage + 1}}">Next</a>
+          {% else %}
+          <a id="finish-btn" class="btn btn-success response-btn-next text-white px-4" role="button">
+            Finish</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+{% endblock %}

@@ -1,0 +1,13 @@
+<div class="response-btns mx-auto d-flex flex-column">
+    {% set responses = [
+    'Not at all',
+    'Rarely',
+    'Sometimes',
+    'Often',
+    'Very often'
+    ] %}
+    {% for response in responses %}
+    <button class="response-btn btn btn-outline-primary d-block d-sm-inline-block m-1" data-value="{{loop.index}}"
+        type="button">{{response}}</button>
+    {% endfor %}
+</div>

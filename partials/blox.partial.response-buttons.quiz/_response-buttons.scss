@@ -1,0 +1,9 @@
+.response-btns {
+  @include media-breakpoint-up(sm) {
+    max-width: 350px;
+  }
+}
+
+.response-btn-next {
+  display: none;
+}
