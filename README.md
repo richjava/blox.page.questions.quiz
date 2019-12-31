@@ -6,4 +6,5 @@ A [Building Blox](https://github.com/Building-Blox/building-blox) questions page
 - Wizard-like interface
 
 ## Blocks
-None
+### Partials
+- response-buttons [blox.partial.response-buttons.quiz](https://github.com/richjava/blox.partial.response-buttons.quiz)
