@@ -2,6 +2,8 @@
 
 A [Building Blox](https://github.com/Building-Blox/building-blox) questions page for quiz package.
 
+![Questions Page](https://building-blox.s3.amazonaws.com/quiz/questions-page.PNG)
+
 ## Features
 - Wizard-like interface
 
