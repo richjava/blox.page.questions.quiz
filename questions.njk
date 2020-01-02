@@ -13,9 +13,7 @@
       </span></p>
     <h1 class="mw-800 mx-auto h3 pt-2 pb-5">{{blox.db.questions.items[blox.page.pagination.currentPage - 1].fields.text}}
     </h1>
-    {% include "pages/packages/blox.package.quiz/blox.page.questions.quiz/partials/blox.partial.response-buttons.quiz/response-buttons.njk" %}
-    {# {% if blox.page.pagination.currentPage === (blox.page.pagination.total) | round %}{% endif %} #}
-
+    {% include "pages/packages/blox.page-package.quiz/blox.page.questions.quiz/partials/blox.partial.response-buttons.quiz/response-buttons.njk" %}
     <div class="response-btns mx-auto mt-5">
       <div class="d-flex align-items-center justify-content-between flex-wrap">
         <div class="order-1 pt-5 pt-xl-0">
